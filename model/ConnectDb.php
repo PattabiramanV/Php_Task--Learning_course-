@@ -9,13 +9,13 @@ public $connection;
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         } else {
-            echo "Connection successful!";
+//            echo "Connection successful!";
         }
     }
 
-public function getConnection() {
-    return $this->connection;
-}
+//public function getConnection() {
+//    return $this->connection;
+//}
 public function setQuery($query){
 
        $data=$this->connection->query($query);
@@ -30,5 +30,5 @@ $config= require './config.php';
 
 //print_r($config);
 $db=new ConnectDb($config);
-$con=$db->getConnection();
+//$con=$db->getConnection();
 
